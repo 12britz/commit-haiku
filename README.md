@@ -4,31 +4,15 @@ A Claude Code plugin that generates haiku poetry from your git changes.
 
 ## Installation
 
-### Option 1: In-session (easiest)
-
-Inside a Claude Code session, run:
-
-```
-/plugin install commit-haiku --dir /path/to/commit-haiku
-```
-
-Then reload plugins:
-
-```
-/reload-plugins
-```
-
-### Option 2: CLI flag
-
-Launch Claude Code with the plugin:
+### From a local plugin directory
 
 ```bash
-claude --plugin-dir /path/to/commit-haiku
+git clone <this-repo-url>
+cd commit-haiku
+claude --plugin-dir .
 ```
 
-### Option 3: Permanent config
-
-Add to `~/.claude/settings.json`:
+Or in `~/.claude/settings.json`:
 
 ```json
 {
@@ -42,9 +26,21 @@ Add to `~/.claude/settings.json`:
 }
 ```
 
-### Option 4: Project-scoped MCP (no plugin install)
+### From a marketplace (once published)
 
-The `.mcp.json` in this repo acts as a standalone project-scoped MCP server. Claude Code picks it up automatically when working in this directory — no plugin setup needed.
+```
+/plugin install commit-haiku@marketplace-name
+```
+
+Then reload:
+
+```
+/reload-plugins
+```
+
+### Zero-config MCP (no plugin install)
+
+The `.mcp.json` in this repo is picked up automatically when Claude Code opens this directory — the `generate_commit_haiku` MCP tool works without any plugin setup.
 
 ## Usage
 
@@ -54,7 +50,7 @@ In a Claude Code session, ask:
 - _"What does commit-haiku say about this commit?"_
 - _"Give me a poem about what I just changed"_
 
-The plugin's skill auto-triggers when Claude detects you're asking about commit poetry. It provides one MCP tool:
+The plugin provides one MCP tool:
 
 | Tool | Description |
 |------|-------------|
