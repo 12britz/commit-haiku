@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "commit-haiku": {
+      "command": "python3",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/commit-haikus-server"]
+    }
+  }
+}
