@@ -2,5 +2,7 @@
   "name": "commit-haiku",
   "description": "Generates haiku poetry from your git changes — every commit deserves a poem",
   "version": "0.1.0",
-  "author": "commit-haiku"
+  "author": {
+    "name": "commit-haiku"
+  }
 }
