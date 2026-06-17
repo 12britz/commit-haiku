@@ -7,7 +7,7 @@ A Claude Code plugin that generates haiku poetry from your git changes.
 ### From a local plugin directory
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/12britz/commit-haiku.git
 cd commit-haiku
 claude --plugin-dir .
 ```
