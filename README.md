@@ -26,10 +26,18 @@ Or in `~/.claude/settings.json`:
 }
 ```
 
-### From a marketplace (once published)
+### From the community marketplace
+
+First add the marketplace (once):
 
 ```
-/plugin install commit-haiku@marketplace-name
+/plugin marketplace add anthropics/claude-plugins-community
+```
+
+Then install:
+
+```
+/plugin install commit-haiku@claude-community
 ```
 
 Then reload:
