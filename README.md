@@ -4,15 +4,31 @@ A Claude Code plugin that generates haiku poetry from your git changes.
 
 ## Installation
 
-### Option 1: Plugin directory (recommended)
+### Option 1: In-session (easiest)
 
-Load the plugin in any Claude Code session:
+Inside a Claude Code session, run:
+
+```
+/plugin install commit-haiku --dir /path/to/commit-haiku
+```
+
+Then reload plugins:
+
+```
+/reload-plugins
+```
+
+### Option 2: CLI flag
+
+Launch Claude Code with the plugin:
 
 ```bash
 claude --plugin-dir /path/to/commit-haiku
 ```
 
-Or add it to your project's Claude Code config at `~/.claude/settings.json`:
+### Option 3: Permanent config
+
+Add to `~/.claude/settings.json`:
 
 ```json
 {
@@ -26,9 +42,9 @@ Or add it to your project's Claude Code config at `~/.claude/settings.json`:
 }
 ```
 
-### Option 2: Project-scoped MCP
+### Option 4: Project-scoped MCP (no plugin install)
 
-The `.mcp.json` at the project root also works as a standalone project-scoped MCP server. Claude Code will pick it up automatically when you're in this directory.
+The `.mcp.json` in this repo acts as a standalone project-scoped MCP server. Claude Code picks it up automatically when working in this directory — no plugin setup needed.
 
 ## Usage
 
