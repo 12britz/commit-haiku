@@ -4,26 +4,25 @@ A Claude Code plugin that generates haiku poetry from your git changes.
 
 ## Installation
 
-### From a local plugin directory
+### From a local path
+
+Clone the repo:
 
 ```bash
 git clone https://github.com/12britz/commit-haiku.git
 cd commit-haiku
-claude --plugin-dir .
 ```
 
-Or in `~/.claude/settings.json`:
+Inside a Claude Code session:
 
-```json
-{
-  "plugins": {
-    "enabledPlugins": {
-      "commit-haiku": {
-        "source": "/path/to/commit-haiku"
-      }
-    }
-  }
-}
+```
+/plugin install commit-haiku /path/to/commit-haiku
+```
+
+Or with the CLI flag:
+
+```bash
+claude --plugin-dir /path/to/commit-haiku
 ```
 
 ### From the community marketplace
@@ -46,9 +45,9 @@ Then reload:
 /reload-plugins
 ```
 
-### Zero-config MCP (no plugin install)
+### Project-scoped MCP (zero config)
 
-The `.mcp.json` in this repo is picked up automatically when Claude Code opens this directory — the `generate_commit_haiku` MCP tool works without any plugin setup.
+The `.mcp.json` in this repo acts as a standalone MCP server. Claude Code picks it up automatically when working in this directory — no setup needed.
 
 ## Usage
 
